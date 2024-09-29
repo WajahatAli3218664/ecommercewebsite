@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header_top_icon_wrapper {
+    @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor-pointer hover:bg-accent hover:text-white;
+  }
+
+  .navbar_link:hover {
+    color: #ff8f9f;
+    transition: all 0.4s;
+  }
+
+  .navbar_link::after {
+    position: absolute;
+    content: "";
+    background-color: #ff8f9c;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    scale: 0;
+    transform-origin: left;
+    transition: all 0.4s;
+  }
+
+  .navbar_link:hover::after {
+    scale: 1;
+  }
+}
+
+/* Add custom styles for the slider */
+.slick-slider, .slick-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  max-width: 100px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  margin-left: 12px;
+}
+
+/* New Products Section Styles */
+.newProductsSection {
+  padding: 20px;
+}
+
+.newProductsHeading {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 16px;
+  font-size: 1.5rem; /* Adjust the size as needed */
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.productCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.productImage {
+  max-width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.productName {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.productCategory {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.productPrice {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.originalPrice {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.productRating {
+  color: #ffcc00;
+  font-size: 1rem;
+}
+
+.addToCartButton {
+  background-color:slategray ;
+  color: black;
+  padding: 8px 16px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addToCartButton:hover {
+  background-color: yellow;
+}
