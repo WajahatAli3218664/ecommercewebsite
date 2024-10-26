@@ -66,9 +66,9 @@ const Testimonials = () => {
 
         <div className="h-auto p-6 rounded-2xl mx-auto bg-white relative max-md:shadow-md">
           <div>
-            <img src="/images/beyonce.webp" className="w-10 h-10 rounded-full" alt="Beyoncé" />
-            <h4 className="text-gray-800 text-sm whitespace-nowrap font-bold mt-3">Beyoncé</h4>
-            <p className="mt-0.5 text-xs text-gray-600">Singer and Entrepreneur</p>
+            <img src="/images/EDS.webp" className="w-10 h-10 rounded-full" alt="Ed Sheeran" />
+            <h4 className="text-gray-800 text-sm whitespace-nowrap font-bold mt-3">Ed Sheeran</h4>
+            <p className="mt-0.5 text-xs text-gray-600">English singer and songwriter</p>
           </div>
           <div className="mt-4">
             <p className="text-gray-600 text-sm leading-relaxed">Excellent selection of products and seamless checkout process. I appreciated the fast shipping and the items were well-packaged. A trustworthy site for online shopping!</p>
