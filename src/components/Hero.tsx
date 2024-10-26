@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import Slide from "./Slide";
 
 const Hero = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 1,

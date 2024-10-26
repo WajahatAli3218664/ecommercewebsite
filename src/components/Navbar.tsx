@@ -6,17 +6,17 @@ const Navbar = () => {
     <div className="hidden lg:block">
       <div className="container">
         <div className="flex w-fit gap-10 mx-auto font-medium py-4 text-black">
-        <Link className="navbar_link relative" href="#">
+          <Link className="navbar_link relative" href="#">
             HOME
-          </Link> 
+          </Link>
           <Link className="navbar_link relative" href="#">
             CATEGORIES
           </Link>
           <Link className="navbar_link relative" href="#">
-            MEN'S
+            MENS
           </Link>
           <Link className="navbar_link relative" href="#">
-            WOMEN'S
+            WOMENS
           </Link>
           <Link className="navbar_link relative" href="#">
             JEWELRY

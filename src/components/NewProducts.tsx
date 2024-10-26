@@ -57,7 +57,6 @@ const NewProducts: React.FC = () => {
           <option value="Watches">Watches</option>
           <option value="Accessories">Accessories</option>
           <option value="Fragrance">Fragrance</option>
-          <option value="Mens Accessories">Mens Accessories</option>
           <option value="Bridal Wear">Bridal Wear</option>
           <option value="Mens T-shirt">Mens T-shirt</option>
           <option value="Athletic Shoes">Athletic Shoes</option>
@@ -65,67 +64,29 @@ const NewProducts: React.FC = () => {
         </select>
       </div>
 
-      <div className="productGrid">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
         {filteredProducts.map((product) => (
           <div key={product.id} className="productCard">
             <img src={product.image} alt={product.name} className="productImage" />
             <h3 className="productName">{product.name}</h3>
-            <p className="productCategory">{product.category}</p>
-            <p className="productPrice">
-              {product.price} <span className="originalPrice">{product.originalPrice}</span>
-            </p>
-            <div className="productRating">
-              {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
-            </div>
-            <button
-              onClick={() => addToCart({ id: product.id, name: product.name, price: product.price, image: product.image })}
-              className="addToCartButton"
-            >
-              Add to Cart
-            </button>
+            <p className="productPrice">{product.price} <span className="originalPrice">{product.originalPrice}</span></p>
+            <p className="productRating">Rating: {product.rating} ⭐</p>
+            <button className="addToCartButton" onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
         ))}
       </div>
 
-      {/* Cart section */}
-      <div className="p-4 max-w-xl mx-auto mt-16">
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="flex items-center justify-between px-4 py-3 bg-gray-200">
-            <h1 className="text-lg font-bold">Shopping Cart</h1>
-            <span className="text-gray-600">({cart.length} items)</span>
-          </div>
-          <div className="p-4">
-            {cart.length === 0 ? (
-              <p className="text-center text-gray-500">Your cart is empty</p>
-            ) : (
-              cart.map((item) => (
-                <div key={item.id} className="flex items-center mb-4">
-                  <img className="h-16 w-16 object-contain rounded-lg mr-4" src={item.image} alt={item.name} />
-                  <div className="flex-1">
-                    <h2 className="text-lg font-bold">{item.name}</h2>
-                    <span className="text-gray-600">{item.price}</span>
-                  </div>
-                  <button onClick={() => removeFromCart(item.id)} className="text-gray-600 hover:text-red-500">
-                    <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                      <path d="M19 13H5v-2h14v2z" />
-                    </svg>
-                  </button>
-                </div>
-              ))
-            )}
-          </div>
-          {cart.length > 0 && (
-            <div className="px-4 py-3 bg-gray-200">
-              <div className="flex justify-between items-center">
-                <span className="font-bold text-lg">Total:</span>
-                <span className="font-bold text-lg">${calculateTotalPrice()}</span>
-              </div>
-              <button className="block w-full mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
-                Checkout
-              </button>
-            </div>
-          )}
-        </div>
+      <div className="cartSummary">
+        <h2>Cart Summary</h2>
+        <ul>
+          {cart.map((item) => (
+            <li key={item.id} className="cartItem">
+              {item.name} - {item.price}
+              <button className="removeFromCartButton" onClick={() => removeFromCart(item.id)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+        <p>Total Price: ${calculateTotalPrice()}</p>
       </div>
     </div>
   );

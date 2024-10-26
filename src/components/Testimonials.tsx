@@ -60,7 +60,7 @@ const Testimonials = () => {
             <p className="mt-0.5 text-xs text-gray-600">Former First Lady of the United States</p>
           </div>
           <div className="mt-4">
-            <p className="text-gray-600 text-sm leading-relaxed">I found exactly what I was looking for at a great price. The customer service team was very helpful and responsive to my questions. I'll definitely shop here again!</p>
+            <p className="text-gray-600 text-sm leading-relaxed">I found exactly what I was looking for at a great price. The customer service team was very helpful and responsive to my questions. I will definitely shop here again!</p>
           </div>
         </div>
 
