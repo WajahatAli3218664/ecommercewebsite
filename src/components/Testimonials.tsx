@@ -15,7 +15,7 @@ const Testimonials = () => {
             <p className="mt-0.5 text-xs text-gray-600">Actress and Activist</p>
           </div>
           <div className="mt-4">
-            <p className="text-gray-600 text-sm leading-relaxed">This site embodies the values of sustainability and quality I hold dear. The customer service was kind and responsive. I’m thrilled with my purchases and can’t wait to shop here again!</p>
+            <p className="text-gray-600 text-sm leading-relaxed">This site embodies the values of sustainability and quality I hold dear. The customer service was kind and responsive. I am  thrilled with my purchases and cannot  wait to shop here again!</p>
           </div>
         </div>
 
